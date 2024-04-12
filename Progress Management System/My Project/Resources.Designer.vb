@@ -123,6 +123,17 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property gathering_navyblue_and_white_colors_classroom_illu_RFKUT1rWQHSnfavUqIHBGA_sTa0en4lRIujmK3uCkRGAQ() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("gathering-navyblue-and-white-colors-classroom-illu-RFKUT1rWQHSnfavUqIHBGA-sTa0en4"& _ 
+                        "lRIujmK3uCkRGAQ", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property plus_icon() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("plus-icon", resourceCulture)
