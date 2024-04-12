@@ -5,6 +5,11 @@ Public Class Form3
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadComboBoxData()
+        Guna2GroupBox2.Visible = False
+    End Sub
+
+    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
+        Guna2GroupBox2.Visible = True
     End Sub
 
     Private Sub LoadComboBoxData()
@@ -73,5 +78,59 @@ Public Class Form3
                 MessageBox.Show("Failed to insert data. Error: " & ex.Message)
             End Try
         End Using
+
+        ' Calculate total marks
+        Dim totalMarks As Integer = CalculateTotalMarks(mark1, mark2, mark3, mark4, mark5)
+
+        ' Calculate aggregate
+        Dim aggregate As Double = CalculateAggregate(totalMarks)
+
+        ' Insert data into the report table
+        InsertReportData(stuid, totalMarks, aggregate)
+    End Sub
+
+    Private Function CalculateTotalMarks(mark1 As Integer, mark2 As Integer, mark3 As Integer, mark4 As Integer, mark5 As Integer) As Integer
+        ' Calculate total marks
+        Return mark1 + mark2 + mark3 + mark4 + mark5
+    End Function
+
+    Private Function CalculateAggregate(totalMarks As Integer) As Double
+        ' Assuming the aggregate calculation logic here
+        ' Calculate percentage
+        ' Assuming total marks out of 500
+        Dim totalSubjects As Integer = 5 ' Assuming 5 subjects
+        Dim totalMarksPossible As Integer = totalSubjects * 100 ' Assuming each subject has 100 marks
+        Dim percentage As Double = (totalMarks / totalMarksPossible) * 100
+        Return percentage
+    End Function
+
+
+    Private Sub InsertReportData(stuid As Integer, totalMarks As Integer, aggregate As Double)
+        Dim query As String = "INSERT INTO report (total_marks, aggregate, stuid) VALUES (@totalMarks, @aggregate, @stuid)"
+
+        Using connection As New MySqlConnection(connectionString)
+            Try
+                connection.Open()
+                Using command As New MySqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@totalMarks", totalMarks)
+                    command.Parameters.AddWithValue("@aggregate", aggregate)
+                    command.Parameters.AddWithValue("@stuid", stuid)
+
+                    command.ExecuteNonQuery()
+                End Using
+                MessageBox.Show("Data inserted into report table successfully.")
+            Catch ex As Exception
+                MessageBox.Show("Failed to insert data into report table. Error: " & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+    Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
+        Form2.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Guna2Button5_Click(sender As Object, e As EventArgs) Handles Guna2Button5.Click
+        Application.Exit()
     End Sub
 End Class

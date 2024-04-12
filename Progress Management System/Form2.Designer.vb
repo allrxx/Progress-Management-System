@@ -125,8 +125,10 @@ Partial Class Form2
         Guna2Button7.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button7.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         Guna2Button7.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2Button7.FillColor = Color.Red
         Guna2Button7.Font = New Font("Segoe UI", 9F)
         Guna2Button7.ForeColor = Color.White
+        Guna2Button7.Image = My.Resources.Resources.close
         Guna2Button7.Location = New Point(16, 328)
         Guna2Button7.Name = "Guna2Button7"
         Guna2Button7.ShadowDecoration.CustomizableEdges = CustomizableEdges22
@@ -143,6 +145,7 @@ Partial Class Form2
         Guna2Button6.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button6.Font = New Font("Segoe UI", 9F)
         Guna2Button6.ForeColor = Color.White
+        Guna2Button6.Image = My.Resources.Resources.report
         Guna2Button6.Location = New Point(16, 273)
         Guna2Button6.Name = "Guna2Button6"
         Guna2Button6.ShadowDecoration.CustomizableEdges = CustomizableEdges24
@@ -159,6 +162,7 @@ Partial Class Form2
         Guna2Button5.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button5.Font = New Font("Segoe UI", 9F)
         Guna2Button5.ForeColor = Color.White
+        Guna2Button5.Image = My.Resources.Resources.check_list
         Guna2Button5.Location = New Point(16, 214)
         Guna2Button5.Name = "Guna2Button5"
         Guna2Button5.ShadowDecoration.CustomizableEdges = CustomizableEdges26
@@ -175,6 +179,7 @@ Partial Class Form2
         Guna2Button4.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button4.Font = New Font("Segoe UI", 9F)
         Guna2Button4.ForeColor = Color.White
+        Guna2Button4.Image = My.Resources.Resources.database_storage
         Guna2Button4.Location = New Point(16, 154)
         Guna2Button4.Name = "Guna2Button4"
         Guna2Button4.ShadowDecoration.CustomizableEdges = CustomizableEdges28
@@ -191,6 +196,7 @@ Partial Class Form2
         Guna2Button3.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button3.Font = New Font("Segoe UI", 9F)
         Guna2Button3.ForeColor = Color.White
+        Guna2Button3.Image = My.Resources.Resources.plus_icon
         Guna2Button3.Location = New Point(16, 94)
         Guna2Button3.Name = "Guna2Button3"
         Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges30
@@ -459,7 +465,6 @@ Partial Class Form2
         ' 
         DataGridViewCellStyle1.BackColor = Color.White
         Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Guna2DataGridView1.BackgroundColor = Color.AliceBlue
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
         DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
@@ -478,7 +483,7 @@ Partial Class Form2
         DataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
         Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
-        Guna2DataGridView1.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        Guna2DataGridView1.GridColor = Color.Gray
         Guna2DataGridView1.Location = New Point(20, 14)
         Guna2DataGridView1.Name = "Guna2DataGridView1"
         Guna2DataGridView1.RowHeadersVisible = False
@@ -491,8 +496,8 @@ Partial Class Form2
         Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
         Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
         Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
-        Guna2DataGridView1.ThemeStyle.BackColor = Color.AliceBlue
-        Guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        Guna2DataGridView1.ThemeStyle.BackColor = Color.White
+        Guna2DataGridView1.ThemeStyle.GridColor = Color.Gray
         Guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
         Guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
         Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9F)
