@@ -37,6 +37,8 @@ Partial Class Form1
         Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Label1 = New Label()
+        Label2 = New Label()
+        Label3 = New Label()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -49,6 +51,7 @@ Partial Class Form1
         ' 
         ' Guna2GradientButton1
         ' 
+        Guna2GradientButton1.BorderRadius = 7
         Guna2GradientButton1.CustomizableEdges = CustomizableEdges7
         Guna2GradientButton1.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientButton1.DisabledState.CustomBorderColor = Color.DarkGray
@@ -57,15 +60,16 @@ Partial Class Form1
         Guna2GradientButton1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2GradientButton1.Font = New Font("Segoe UI", 9F)
         Guna2GradientButton1.ForeColor = Color.White
-        Guna2GradientButton1.Location = New Point(662, 394)
+        Guna2GradientButton1.Location = New Point(662, 348)
         Guna2GradientButton1.Name = "Guna2GradientButton1"
         Guna2GradientButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2GradientButton1.Size = New Size(199, 50)
+        Guna2GradientButton1.Size = New Size(199, 44)
         Guna2GradientButton1.TabIndex = 0
-        Guna2GradientButton1.Text = "Guna2GradientButton1"
+        Guna2GradientButton1.Text = "Login"
         ' 
         ' Guna2TextBox1
         ' 
+        Guna2TextBox1.BorderRadius = 7
         Guna2TextBox1.CustomizableEdges = CustomizableEdges5
         Guna2TextBox1.DefaultText = ""
         Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
@@ -75,17 +79,18 @@ Partial Class Form1
         Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox1.Font = New Font("Segoe UI", 9F)
         Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(620, 314)
+        Guna2TextBox1.Location = New Point(620, 277)
         Guna2TextBox1.Name = "Guna2TextBox1"
         Guna2TextBox1.PasswordChar = ChrW(0)
         Guna2TextBox1.PlaceholderText = ""
         Guna2TextBox1.SelectedText = ""
         Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2TextBox1.Size = New Size(295, 45)
+        Guna2TextBox1.Size = New Size(295, 40)
         Guna2TextBox1.TabIndex = 1
         ' 
         ' Guna2TextBox2
         ' 
+        Guna2TextBox2.BorderRadius = 7
         Guna2TextBox2.CustomizableEdges = CustomizableEdges3
         Guna2TextBox2.DefaultText = ""
         Guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
@@ -95,23 +100,23 @@ Partial Class Form1
         Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox2.Font = New Font("Segoe UI", 9F)
         Guna2TextBox2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Location = New Point(620, 231)
+        Guna2TextBox2.Location = New Point(620, 204)
         Guna2TextBox2.Name = "Guna2TextBox2"
         Guna2TextBox2.PasswordChar = ChrW(0)
         Guna2TextBox2.PlaceholderText = ""
         Guna2TextBox2.SelectedText = ""
         Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2TextBox2.Size = New Size(295, 45)
+        Guna2TextBox2.Size = New Size(295, 40)
         Guna2TextBox2.TabIndex = 2
         ' 
         ' Guna2PictureBox1
         ' 
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges1
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(12, 12)
+        Guna2PictureBox1.Location = New Point(12, 11)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2PictureBox1.Size = New Size(504, 576)
+        Guna2PictureBox1.Size = New Size(504, 508)
         Guna2PictureBox1.TabIndex = 3
         Guna2PictureBox1.TabStop = False
         ' 
@@ -119,17 +124,39 @@ Partial Class Form1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 20F)
-        Label1.Location = New Point(700, 143)
+        Label1.Location = New Point(735, 129)
         Label1.Name = "Label1"
-        Label1.Size = New Size(142, 41)
+        Label1.Size = New Size(84, 37)
         Label1.TabIndex = 4
-        Label1.Text = "Welcome"
+        Label1.Text = "Login"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.ForeColor = SystemColors.ControlDarkDark
+        Label2.Location = New Point(630, 186)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(60, 15)
+        Label2.TabIndex = 6
+        Label2.Text = "Username"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.ForeColor = SystemColors.ControlDarkDark
+        Label3.Location = New Point(630, 259)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(57, 15)
+        Label3.TabIndex = 7
+        Label3.Text = "Password"
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 17F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1000, 600)
+        ClientSize = New Size(1000, 529)
+        Controls.Add(Label3)
+        Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(Guna2PictureBox1)
         Controls.Add(Guna2TextBox2)
@@ -149,5 +176,7 @@ Partial Class Form1
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2GradientButton1 As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
 
 End Class
