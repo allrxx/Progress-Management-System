@@ -12,6 +12,8 @@
         If enteredUsername = expectedUsername AndAlso enteredPassword = expectedPassword Then
             ' Login success
             MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Form2.Show()
+            Me.Hide()
         Else
             ' Login failed
             MessageBox.Show("Invalid username or password.", "Authentication Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
